@@ -1,0 +1,27 @@
+{
+  "tests": [
+    {
+      "name": "Get all comments",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Create new comment",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "story_id": 1,
+        "author": "Test User",
+        "text": "Great photo!"
+      },
+      "expectedStatus": 201
+    },
+    {
+      "name": "Get comments by story_id",
+      "method": "GET",
+      "path": "/?story_id=1",
+      "expectedStatus": 200
+    }
+  ]
+}
